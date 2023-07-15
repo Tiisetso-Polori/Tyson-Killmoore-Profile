@@ -1,5 +1,6 @@
 import React from 'react';
 import Gallery from './Gallery';
+//import Images from './Images';
 
 function App() {
   return (

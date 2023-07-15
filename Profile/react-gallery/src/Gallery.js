@@ -1,6 +1,6 @@
 import React from 'react'
 import './gallery.css'
-//import Images from './Images'
+import Images from './Images'
 
 import ejozi from './resrc/ejozi.jpg'
 //import ejoziDir from './resrc/ejozi/'
@@ -17,7 +17,7 @@ import blooming from './resrc/blooming.jpg'
 import egumbini from './resrc/egumbini.jpg'
 //import egumbiniDir from './resrc/egumbini/'
 
-const Gallery= () => {
+/*const Gallery= () => {
     
     /*let data =[
         {
@@ -97,13 +97,8 @@ const Gallery= () => {
             photos:['0.jpg','1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg','11.jpg','12.jpg','13.jpg','13.jpg','14.jpg','15.jpg']
         }
     ]
-
-    function viewImages (name){
-        //let curr = collections.find((item)=>{return item.header===name});
-        console.log("This is working, or supposed to");
-    }
     
-    return(
+    /*
         <div id='collection-cont'>
             {
             /*
@@ -114,7 +109,7 @@ const Gallery= () => {
                         </div>
                     )
                 })
-            */
+            
             collections.map((item, index) =>{
                 return(                    
                         <div id='collection' key={index} onClick={viewImages(item.header)}>
@@ -125,8 +120,43 @@ const Gallery= () => {
             })
             }
         </div>
-    )
-}
+}*/
+
+class Gallery extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        gallery: true,
+        visibility: collections.map((item, index) =>{
+            return(    
+                                
+                    <div id='collection' key={index} /*onClick={this.toggleImages(item.header)}*/>
+                        <h1>{item.header}</h1> 
+                            <img src={item.cover} alt={item.header} style={{width:'100%'}} title='Gallery Collection Item'/>
+                    </div>
+            )  
+        })
+      };
+      this.toggleImages = this.toggleImages.bind(this);
+    }
+
+    toggleImages(collection){
+        console.log("Now Showing " + collection);
+    }
+
+    render() {
+        return (
+          <div>
+            {//<button onClick={this.toggleVisibility}>Click Me</button>
+            }
+            <button onClick={this.toggleImages("uh")}>Click Me</button>
+            <div id='collection-cont'>
+                {this.state.visibility}
+            </div>
+          </div>
+        );
+    }
+  }
 
 export default Gallery
 
