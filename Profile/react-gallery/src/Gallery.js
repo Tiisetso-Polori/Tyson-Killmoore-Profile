@@ -1,6 +1,6 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import './gallery.css'
-import Images from './Images'
+//import Images from './Images'
 
 import ejozi from './resrc/ejozi.jpg'
 //import ejoziDir from './resrc/ejozi/'
@@ -126,12 +126,12 @@ class Gallery extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        gallery: true,
-        visibility: collections.map((item, index) =>{
+        viewing: 'main',
+        screen: collections.map((item, index) =>{
             return(    
                                 
-                    <div id='collection' key={index} /*onClick={this.toggleImages(item.header)}*/>
-                        <h1>{item.header}</h1> 
+                    <div key={index} onClick={this.toggleImages(item.header)}  id='collection'>
+                        <h1>{item.header}</h1>
                             <img src={item.cover} alt={item.header} style={{width:'100%'}} title='Gallery Collection Item'/>
                     </div>
             )  
@@ -139,22 +139,35 @@ class Gallery extends React.Component {
       };
       this.toggleImages = this.toggleImages.bind(this);
     }
-
-    toggleImages(collection){
-        console.log("Now Showing " + collection);
-    }
+    
+    toggleImages = (collection) => this.setState({
+        viewing:collection,
+        screen: collections.filter = (item) =>{return item.header === collection}
+        
+    });
 
     render() {
+        if(this.state.viewing==='main'){
         return (
           <div>
             {//<button onClick={this.toggleVisibility}>Click Me</button>
             }
-            <button onClick={this.toggleImages("uh")}>Click Me</button>
+        
             <div id='collection-cont'>
-                {this.state.visibility}
+                {this.state.screen}
             </div>
           </div>
         );
+    }else{
+        return (
+            <div>
+              {//<button onClick={this.toggleVisibility}>Click Me</button>
+              }
+              <div>
+                  {console.log(this.state.screen)}
+              </div>
+            </div>
+            );}
     }
   }
 

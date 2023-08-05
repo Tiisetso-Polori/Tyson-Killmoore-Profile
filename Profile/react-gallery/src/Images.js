@@ -76,9 +76,9 @@ class Images extends React.Component {
       this.viewImages = this.viewImages.bind(this);
     }
     
-    viewImages = (collection)=>{this.setState({
-        firstName:"now showing" +collection
-    })}
+   // viewImages = (collection)=>{this.setState({
+     //   firstName:"now showing" + collection
+    //})}
 
     render() {
       return (
