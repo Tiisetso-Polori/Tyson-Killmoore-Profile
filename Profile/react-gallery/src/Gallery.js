@@ -161,7 +161,7 @@ class Gallery extends React.Component {
     }else{
         return (
             <div>
-              {//<button onClick={this.toggleVisibility}>Click Me</button>
+              {<button onClick={this.toggleVisibility('ejozi')}>Click Me</button>
               }
               <div>
                   {console.log(this.state.screen)}
