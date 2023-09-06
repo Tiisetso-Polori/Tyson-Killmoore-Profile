@@ -6,29 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/restyle.css">
+    <script src="./js/galleryRunner.js"></script>
     <title>Gallery | Photos Viewer</title>
 </head>
-<body>
-    <main>
+<body >
+   
+    <header>
+        <h1>My Shoots</h1>
+    </header>
+   
+    <main id="gallery">
         <!-- SECTION FOR SCROLLABLE PHOTO VIEW...-->
-        <section id="collection-cont">
-            <div id="ejozi collection">
+        <section id="gal-nav">
+            <div id="ejozi" onclick="viewImages('eJozi')">
                 <img src="../Profile/react-gallery/src/resrc/ejozi.jpg" alt="">
+                <h3>eJozi</h3>
             </div>
-            <div id="bhosso collection">
+            <div id="bhosso" onclick="viewImages('Bhosso')">
                 <img src="../Profile/react-gallery/src/resrc/bhosso.jpg" alt="">
+                <h3>Bhosso</h3>
             </div>
-            <div id="brown collection">
+            <div id="brown" onclick="viewImages('Brown')">
                 <img src="../Profile/react-gallery/src/resrc/brown.jpg" alt="">
+                <h3>Brown</h3>
             </div>
-            <div id="melanin collection">
+            <div id="melanin" onclick="viewImages('Melanin')">
                 <img src="../Profile/react-gallery/src/resrc/melanin.jpg" alt="">
+                <h3>Melanin</h3>
             </div>
-            <div id="primrose collection">
+            <div id="primrose" onclick="viewImages('Primrose')">
                 <img src="../Profile/react-gallery/src/resrc/primrose.jpg" alt="">
+                <h3>Primrose</h3>
             </div>
         </section>
     </main>
+    <section id="pictures" style="display: grid; grid-template-columns: 1fr 1fr 2fr 1fr;">
+        
+    </section>
     
 </body>
 </html>
