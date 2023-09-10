@@ -64,7 +64,7 @@ function viewImages(images){
          console.log(stringing.join(''))
          */
           var stringing = pics.at(0).photos.map((img)=> {
-                return `<img src='${pics.at(0).dir}${img}' alt = 'yeah'/>`
+                return `<img src='${pics.at(0).dir}${img}' alt = 'An image from the ${pics.at(0).header} shoot'/>`
           });
 
           box.innerHTML = stringing.join('');
