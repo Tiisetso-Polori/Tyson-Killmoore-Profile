@@ -189,14 +189,15 @@ body{
 }
 
 #gal-nav{
-    display: flex;
-    flex-direction: row;
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(1fr,3);
     justify-content: space-evenly;
     list-style-type: none;
     overflow-x: scroll;
 }
 
-#ejozi, #bhosso, #primrose, #brown, #melanin{
+#ejozi, #bhosso, #primrose, #brown, #melanin,#blooming{
     width:23rem;
     height:23rem;
     font-size: 1.5rem;
@@ -209,7 +210,7 @@ body{
     margin:1.5rem;
 }
 
-#ejozi:hover, #bhosso:hover, #primrose:hover, #brown:hover, #melanin:hover{
+#ejozi:hover, #bhosso:hover, #primrose:hover, #brown:hover, #melanin:hover,#blooming:hover{
     transform:translateY(-1rem);
     transition: 1s;
 }
@@ -225,7 +226,7 @@ body{
 }
 
 #gal-nav::-webkit-scrollbar{
-    width:15px;
+    width:30px;
     height:15px;
 }
 
@@ -248,10 +249,21 @@ body{
 }
 
 #pictures{
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     z-index:1000;
-    
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    background-color:rgba(150,150,150,.9)
+}
+
+#pictures img{
+    width:100%;
+    margin: 5px;
 }
 
 @media screen and (max-width:490px) {

@@ -38,9 +38,13 @@
                 <img src="../Profile/react-gallery/src/resrc/primrose.jpg" alt="">
                 <h3>Primrose</h3>
             </div>
+            <div id="blooming" onclick="viewImages('Blooming')" ondblclick="clearImages()">
+                <img src="../Profile/react-gallery/src/resrc/blooming.jpg" alt="">
+                <h3>Blooming</h3>
+            </div>
         </section>
     </main>
-    <section id="pictures" style="display: grid; grid-template-columns: 1fr 1fr 2fr 1fr;">
+    <section id="pictures" ondblclick="clearImages()" style="visibility: hidden;">
         
     </section>
     
