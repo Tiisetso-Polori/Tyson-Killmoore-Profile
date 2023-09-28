@@ -71,4 +71,8 @@ function viewImages(images){
         
     }
 
-   
+   function clearImages(){
+
+    var box = document.getElementById("pictures")
+    box.innerHTML = ''
+   }
