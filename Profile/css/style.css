@@ -258,7 +258,12 @@ body{
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    background-color:rgba(150,150,150,.9)
+    background-color:rgba(150,150,150,.9);
+    /* the normal box delays visibility transition so it doesn't hide until after the opacity transition is done*/
+  @include transition(
+    opacity 500ms linear,
+    visibility 0s linear 500ms
+  )
 }
 
 #pictures img{
