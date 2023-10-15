@@ -69,14 +69,13 @@ function viewImages(images){
 
           box.innerHTML = stringing.join('');
           box.style.zIndex ='10000';
-          box.style.transition= '2.5s';
           box.style.visibility = 'visible';
+          //box.style.transition= '2.5s';
     }
 
    function clearImages(){
 
     var box = document.getElementById("pictures")
-    box.innerHTML = '';
     box.style.visibility='hidden';
-    box.style.transition= '2.5s';
+    box.innerHTML = '';
    }

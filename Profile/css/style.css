@@ -179,10 +179,23 @@ h1{
 
 body{
     width:100%;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1000;
+    width: 100%;
+    height:100px;
+    background-color:#AAA;
+    text-align: justify;
 }
 
 #gallery{
-     height: 20rem;
+    top:100px;
+    height: 98vh;
     display:flex;
     flex-direction: column;
     
@@ -190,17 +203,19 @@ body{
 
 #gal-nav{
     width:100vw;
-    display: flex;
-    flex-direction: row-reverse;
+    height:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-evenly;
     list-style-type: none;
-    overflow-x: scroll;
+    /*overflow-x: scroll;*/
 }
 
 #gal-nav div{
-    width:200px;
-    height:200px;
+    width:350px;
+    height:350px;
     font-size: 1.5rem;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -260,10 +275,6 @@ body{
     overflow-x: scroll;
     background-color:rgba(150,150,150,.9);
     /* the normal box delays visibility transition so it doesn't hide until after the opacity transition is done*/
-  @include transition(
-    opacity 500ms linear,
-    visibility 0s linear 500ms
-  )
 }
 
 #pictures img{

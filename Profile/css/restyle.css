@@ -133,6 +133,12 @@ main{
     list-style-type: none;
 }
 
+#gal-nav a{
+    color:var(--text1);
+    text-decoration: none;
+    margin:0.7rem auto;
+}
+
 #gal-nav-item{
     width:20rem;
     height:20rem;
